@@ -6,6 +6,7 @@ public record MeditionRequestDTO(
         String room,
         BigDecimal temperature,
         BigDecimal humidity,
-        BigDecimal pressure
+        BigDecimal pressure,
+        Integer sensor
 ) {
 }

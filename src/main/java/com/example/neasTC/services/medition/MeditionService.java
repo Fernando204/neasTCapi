@@ -26,7 +26,8 @@ public class MeditionService {
                 dto.room(),
                 dto.temperature(),
                 dto.humidity(),
-                dto.pressure()
+                dto.pressure(),
+                dto.sensor()
         );
         medition.verifyStatus(BigDecimal.valueOf(25),BigDecimal.ONE);
 

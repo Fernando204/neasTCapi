@@ -16,20 +16,32 @@ public class Medition {
 
     private MeditionStatus status;
 
+    private Integer sensor;
+
     private Instant createdAt;
 
     public Medition(
             String room,
             BigDecimal temperature,
             BigDecimal humidity,
-            BigDecimal pressure
+            BigDecimal pressure,
+            Integer sensor
     ) {
         this.room = room;
         this.temperature = temperature;
         this.humidity = humidity;
         this.pressure = pressure;
+        this.sensor = sensor;
 
         this.createdAt = Instant.now();
+    }
+
+    public Integer getSensor() {
+        return sensor;
+    }
+
+    public void setSensor(Integer sensor) {
+        this.sensor = sensor;
     }
 
     public Instant getCreatedAt() {

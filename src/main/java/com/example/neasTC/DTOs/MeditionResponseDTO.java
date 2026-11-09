@@ -13,6 +13,7 @@ public record MeditionResponseDTO(
         BigDecimal humidity,
         BigDecimal pressure,
         MeditionStatus status,
+        Integer sensor,
         Instant createdAt
 ) {
     public static MeditionResponseDTO fromEntity(Medition medition){
@@ -23,6 +24,7 @@ public record MeditionResponseDTO(
                 medition.getHumidity(),
                 medition.getPressure(),
                 medition.getStatus(),
+                medition.getSensor(),
                 medition.getCreatedAt()
         );
     }
