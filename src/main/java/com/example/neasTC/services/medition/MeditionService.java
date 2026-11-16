@@ -15,9 +15,13 @@ import java.util.List;
 @Service
 public class MeditionService {
     private final MeditionRepository meditionRepository;
+    private final RestClient restClient;
 
-    public MeditionService(MeditionRepository meditionRepository) {
+    public MeditionService(
+        RestClient restClient,
+        MeditionRepository meditionRepository) {
         this.meditionRepository = meditionRepository;
+        this.restClient = restClient;
     }
 
     @Transactional
@@ -60,6 +64,12 @@ public class MeditionService {
                 lastInRoomB,
                 allMeditions
         );
+    }
 
+    public void keepCognitAlive(){
+        return restClient.get()
+                .uri("https://cognit-2t72.onrender.com/keep")
+                .retrieve()
+                .toBodilessEntity();
     }
 }
