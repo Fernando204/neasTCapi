@@ -7,6 +7,7 @@ import com.example.neasTC.models.meditions.Medition;
 import com.example.neasTC.repositories.medition.MeditionRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.client.RestClient;
 
 import java.math.BigDecimal;
 import java.util.Comparator;
