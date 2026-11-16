@@ -73,6 +73,6 @@ public class MeditionService {
         return restClient.get()
                 .uri("https://cognit-2t72.onrender.com/keep")
                 .retrieve()
-                .toBodilessEntity();
+                .body(String.class);
     }
 }
